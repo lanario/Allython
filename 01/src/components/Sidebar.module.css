@@ -1,41 +1,87 @@
+/* Define o estilo para a sidebar */
 .sidebar {
-    display: grid;
-    background: var(--gray-800);
-    border-radius: 8px;
-    overflow: hidden;
+    display: grid; /* Usa grid layout para o contêiner da sidebar */
+    background: var(--gray-800); /* Define a cor de fundo da sidebar */
+    border-radius: 8px; /* Arredonda os cantos da sidebar */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites da sidebar */
+    max-width: 300px; /* Define a largura máxima da sidebar */
 }
 
+/* Estilo para as imagens dentro da sidebar */
 .sidebar img {
-    max-width: 50%; /* Limita a largura da imagem ao contêiner */
-    height: auto;    /* Mantém a proporção da imagem */
-    border-radius: 0%; /* Opcional: torna a imagem circular */
-    }
+    max-width: 100%; /* Limita a largura da imagem ao tamanho do contêiner pai */
+    height: auto; /* Mantém a proporção da altura da imagem */
+}
 
+/* Estilo específico para a imagem de capa */
+.capa img {
+    width: 10%; /* Ajusta a largura da imagem da capa para 20% da largura do contêiner */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    display: block; /* Remove qualquer efeito de flex que poderia afetar o layout */
+}
+
+/* Estilo para o contêiner do perfil */
 .profileContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Usa flexbox para alinhar os itens no contêiner */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
 }
 
+/* Estilo para o avatar */
+.avatar {
+    width: 80px; /* Define a largura do avatar */
+    height: 80px; /* Define a altura do avatar */
+    border-radius: 50%; /* Torna o avatar circular */
+    border: 4px solid var(--gray-800); /* Adiciona uma borda ao redor do avatar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao avatar para destacá-lo */
+    margin-top: -2rem; /* Move o avatar para cima, sobrepondo a imagem da capa */
+    outline: 2px solid var(--yellow-500);
+}
+
+.profileContainer strong {
+    margin-top: 1rem;
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.profileContainer span {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+
+/* Estilo para o rodapé da sidebar */
 .sidebar footer {
-    border-top: 1px solid var(--gray-600);
-    margin-top: 1.5rem; 
-    padding: 1.5rem 2rem 2rem; /* para fazer os espaçamentos do botao de editar perfil */
+    border-top: 1px solid var(--gray-600); /* Adiciona uma linha acima do rodapé */
+    margin-top: 1.5rem; /* Adiciona margem acima do rodapé */
+    padding: 1.5rem 2rem 2rem; /* Adiciona espaçamento interno ao redor do conteúdo do rodapé */
 }
 
+/* Estilo para o link de editar perfil no rodapé */
 .sidebar footer a {
-    width: 100%;
-    background:transparent;
-    color: var(--yellow-500);
-    border: 1px solid var(--yellow-500);
-    border-radius: 8px;
-    height: 50px;
-    padding: 0 1.5rem; /* faz o espaçamento da borda que envolve o editar o link */
-    font-weight: bold;
-    display: block;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%; /* Faz o link ocupar toda a largura disponível */
+    background: transparent; /* Define o fundo do link como transparente */
+    color: var(--yellow-500); /* Define a cor do texto do link */
+    border: 1px solid var(--yellow-500); /* Adiciona uma borda ao redor do link */
+    border-radius: 8px; /* Arredonda os cantos da borda do link */
+    height: 50px; /* Define a altura do link */
+    padding: 0 1.5rem; /* Adiciona espaçamento interno horizontal ao redor do texto do link */
+    font-weight: bold; /* Define o texto do link como negrito */
+    display: block; /* Faz com que o link se comporte como um bloco, ocupando toda a largura disponível */
+    text-decoration: none; /* Remove o sublinhado do texto do link */
+    
+    display: flex; /* Usa flexbox para o layout interno do link */
+    align-items: center; /* Alinha verticalmente o texto do link no centro */
+    justify-content: center; /* Alinha horizontalmente o texto do link no centro */
+    
+    gap: 5px;
+
+    transition:  color 0.3s, background-color 0.3s ;
 }
 
+
+.sidebar footer a:hover {
+    background: var(--yellow-500);
+    color: var(--white);
+}
