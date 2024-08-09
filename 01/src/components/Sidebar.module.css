@@ -1,0 +1,41 @@
+.sidebar {
+    display: grid;
+    background: var(--gray-800);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sidebar img {
+    max-width: 50%; /* Limita a largura da imagem ao contêiner */
+    height: auto;    /* Mantém a proporção da imagem */
+    border-radius: 0%; /* Opcional: torna a imagem circular */
+    }
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar footer {
+    border-top: 1px solid var(--gray-600);
+    margin-top: 1.5rem; 
+    padding: 1.5rem 2rem 2rem; /* para fazer os espaçamentos do botao de editar perfil */
+}
+
+.sidebar footer a {
+    width: 100%;
+    background:transparent;
+    color: var(--yellow-500);
+    border: 1px solid var(--yellow-500);
+    border-radius: 8px;
+    height: 50px;
+    padding: 0 1.5rem; /* faz o espaçamento da borda que envolve o editar o link */
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

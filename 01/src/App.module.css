@@ -1,0 +1,10 @@
+.wrapper {
+    max-width: 70rem;
+    margin: 2rem auto; /* Primeiro valor é para cima e baixo , e segundo para esquerda direita de modo com que fique centralizado na tela */
+    padding: 0 1rem; /* se o conteudo for reduzido por zoom o conteudo nao ficara colado nas laterais , assim como dito anteriormente , o valor para as laterais é o segundo*/
+    
+    display: grid; /* criar layouts de grade */
+    grid-template-columns: 256px 1fr; /*Como estamos usando o display grid, temos algumas colunas que os espaçamentos de duas delas foram definidos, OBS:fr é uma unidade utilizade para dizer que vai ter um tamnho flexivel*/
+    gap: 2rem;/*Espaçamento entre as colunas*/
+    align-items: flex-start; /*o flex start faz o conteudo das colunas se alinharem para cima*/
+}   
